@@ -4,3 +4,4 @@ streamlit==1.24.0
 torch==2.0.1
 streamlit-webrtc==0.45.1
 av==10.0.0
+torchvision==0.15.2
