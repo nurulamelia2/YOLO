@@ -5,7 +5,6 @@ import torch
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 import av
 import torchvision
-from sample_utils.turn import get_ice_servers
 # from Single_Instance import draw_bounding_boxes
 
 
@@ -115,13 +114,12 @@ with tab3:
             # return img
             return av.VideoFrame.from_ndarray(result_img, format="bgr24")
 
+    RTC_CONFIGURATION = RTCConfiguration(
+        {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]})
     webrtc_ctx = webrtc_streamer(
         key="object-detection",
         mode=WebRtcMode.SENDRECV,
-        rtc_configuration={
-            "iceServers": get_ice_servers(),
-            "iceTransportPolicy": "relay",
-        },
+        rtc_configuration=RTC_CONFIGURATION,
         media_stream_constraints={"video": True, "audio": False},
         video_processor_factory=VideoProcessor,
         async_processing=True,
