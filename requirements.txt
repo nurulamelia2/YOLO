@@ -1,8 +1,8 @@
 numpy==1.19.5
-opencv-python-headless==4.8.0.74
-streamlit==1.24.0
+streamlit==0.52.1
+opencv-python==4.1.2.30
+black
 torch==2.0.1
-streamlit-webrtc==0.45.1
 av==10.0.0
 torchvision==0.15.2
 
