@@ -7,7 +7,6 @@ aiortc==1.2.0
 opencv-python-headless==4.7.0.72
 pydub==0.25.1
 streamlit_webrtc==0.45.1
-twilio~=8.4.0
 
 # YOLOv5 requirements
 # Usage: pip install -r requirements.txt
