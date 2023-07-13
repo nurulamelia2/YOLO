@@ -3,6 +3,7 @@ torch==2.0.1
 av==9.0.0
 torchvision==0.15.2
 aiortc==1.4.0
+aioice==0.9.0
 
 opencv-python-headless==4.7.0.72
 pydub==0.25.1
